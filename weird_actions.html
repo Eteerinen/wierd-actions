@@ -7,12 +7,31 @@
 	<body>
 		<h1>What on earth are you DOING?</h1>
 		<script type="module">
+			// import objects
 			import { all_subjects } from "./subjects.js";
 			import { all_actions } from "./actions.js";
 			import { all_places } from "./places.js";
-			console.log(all_subjects[1].name);
-			console.log(all_actions[6].name);
-			console.log(all_places[1].name);
+			
+			//Get random phrases
+			function getRdmSubject(subject){
+				let length = Object.keys(subject).length;
+				let rdm_id = Math.floor(Math.random() * length + 1);
+				return subject[rdm_id].name;
+			}
+			
+			function getRdmActions(actions){
+				let length = Object.keys(actions).length;
+				let rdm_id = Math.floor(Math.random() * length + 1);
+				return actions[rdm_id].name;
+			}
+			
+			function getRdmPlaces(places){
+				let length = Object.keys(places).length;
+				let rdm_id = Math.floor(Math.random() * length + 1);
+				return places[rdm_id].name;
+			}
+			
+			console.log(getRdmSubject(all_places));
 		</script>
 	</body>
 </html>
