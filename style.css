@@ -1,0 +1,39 @@
+h1 {
+	text-align: center;
+}
+.button_row {
+	display: flex;
+	justify-content: center;
+}
+.container {
+	justify-content: center;
+	display: flex;
+	gap: 10px;
+}
+#show_sub {
+	height: 100px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	background-color: aliceblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#show_act {
+	height: 100px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	background-color: aquamarine;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#show_plc {
+	height: 100px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	background-color: beige;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
