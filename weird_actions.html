@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="style.css">
 		<meta charset="utf-8">
 		<title>Weird Actions</title>
 	</head>
 	<body>
 		<h1>What on earth are you DOING?</h1>
+		<div class="button_row"><button id="get_sen"><h2>Show a Sentence</h2></button></div>
+		<div class="container">
+			<h2><div id="show_sub"></div></h2>
+			<h2><div id="show_act"></div></h2>
+			<h2><div id="show_plc"></div></h2>
+		</div>
 		<script type="module">
 			// import objects
 			import { all_subjects } from "./subjects.js";
@@ -31,9 +38,21 @@
 				return places[rdm_id].name;
 			}
 			
-			console.log(getRdmSubject(all_subjects));
-			console.log(getRdmActions(all_actions));
-			console.log(getRdmPlaces(all_places));
+			// Show sentence
+			const show_subject = document.getElementById("show_sub");
+			const show_action = document.getElementById("show_act");
+			const show_place = document.getElementById("show_plc");
+			const get_sentence = document.getElementById("get_sen");
+			let random_subject = "";
+			
+			get_sentence.addEventListener("click", function(){
+				let subject = getRdmSubject(all_subjects);
+				let action = getRdmPlaces(all_actions);
+				let place = getRdmPlaces(all_places);
+				show_subject.textContent = subject;
+				show_action.textContent = action;
+				show_place.textContent = place + ".";
+			});
 		</script>
 	</body>
 </html>
